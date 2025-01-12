@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            background-color: #ffe6f2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            /* background-color: #ffcce0; */
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ff66b2;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: black;
+            /* font: Jersey 15; */
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            color: #ff66b2;
+            border-bottom: 2px solid #ff99cc;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .intro, .contact {
+            text-align: center;
+        }
+
+        .projects, .skills, .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project, .skill, .testimonial {
+            flex: 1 1 calc(33.333% - 20px);
+            background: #ffe6f2;
+            padding: 20px;
+            border: 1px solid #ff99cc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            color: #ff66b2;
+            font-weight: bold;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ff99cc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            padding: 10px 20px;
+            background: #ff66b2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background: #cc6699;
+        }
+
+        .library-image {
+            width: 150px; /* Set desired width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+
+        @media (max-width: 768px) {
+            .project, .skill, .testimonial {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body class="container">
+
+    <header>
+        <h1>Welcome to Mary's Portfolio</h1>
+        <p>A showcase of my skills, projects, and achievements.</p>
+    </header>
+
+    <section class="intro">
+        <h2>About Me</h2>
+        <p>
+          Hi, my name is Mary. I am a passionate website developer specialising in creating accessible, user-friendly, and visually engaging websites. 
+          With a focus on designing fun and interactive user interfaces, I strive to ensure that everyone can enjoy a seamless browsing experience. 
+          My goal is to combine design creativity with technical expertise to bring ideas to life and solve real-world problems.
+        </p>
+    </section>
+
+    <section class="links">
+        <h2>Find Me Online</h2>
+        <a href="https://github.com/maryajii" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/mary-ajiboye" target="_blank">LinkedIn</a>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="playlist.jpeg" alt="Project Image">
+            <p>In this project I built a machine learning application which creates a curated playlist for users based on their mood input.</p>
+        </div>
+        <div class="project">
+            <h3>Library App</h3>
+            <img src="library.jpeg" alt="Project Image" class="library-image">
+            <p>In this project I built a libray application that allows users to review books and see books available to buy based on pricing and genre.</p>
+        </div>
+        <div class="project">
+            <h3>Game App</h3>
+            <img src="game.jpeg" alt="Project Image">
+            <p>In this project I built an easy, user-friendly game.</p>
+        </div>
+    </section>
+    
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <h3>Programming</h3>
+            <p>Proficient in Python, JavaScript, and Java with a strong understanding of object-oriented programming and algorithm design.</p>
+        </div>
+        <div class="skill">
+            <h3>Web Development</h3>
+            <p>Experienced in building responsive and accessible websites using HTML, CSS, JavaScript.</p>
+        </div>
+        <div class="skill">
+            <h3>Databases</h3>
+            <p>Knowledgeable and NoSQL databases such as MySQL, including database design.</p>
+        </div>
+        <div class="skill">
+            <h3>AI</h3>
+            <p>Familiar with foundational concepts in artificial intelligence, including machine learning algorithms, and tools like TensorFlow.</p>
+        </div>
+    </section>
+    
+
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Amazing work! Great to work with, very professional. Highly recommend."</p>
+            <p>- Ayan Xasan</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaborations or inquiries.</p>
+        <form action="mailto:maryaji2003@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Email</button>
+        </form>
+    </section>
+
+</body>
+</html>
